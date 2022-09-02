@@ -35,6 +35,12 @@
  It is purely written in dart, So it can be used on server as well as on client.
 
 
+This is a fork of the original, that removes the dependancy that is causing the error: 
+```
+Because image 3.1.1 depends on xml ^5.0.0 and every version of xmp from git depends on xml ^4.5.1, image 3.1.1 is incompatible with xmp from git.
+So, because imageffi depends on both image 3.1.1 and xmp from git, version solving failed.
+```
+
 
 # Table of Contents
   - [Installing](#lets-get-started)

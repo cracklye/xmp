@@ -41,7 +41,7 @@ class XMP {
           var rdf_Description =
               xml.descendants.where((node) => node is XmlElement).toList();
           rdf_Description.forEach((element) {
-            _addAttribute(result, element, raw);
+            _addAttribute(result, element as XmlElement, raw);
           });
 
           // Other selected known tags
@@ -83,11 +83,14 @@ class XMP {
       var temporaryName = temporaryElement.name.toString().toLowerCase();
 
       while (!_envelopeTags.every((element) => element != temporaryName)) {
-        temporaryElement = temporaryElement.parentElement;
-        if (temporaryElement == null) {
+        if (temporaryElement.parentElement == null) {
           break;
         }
-        temporaryName = temporaryElement?.name?.toString()?.toLowerCase();
+        temporaryElement = temporaryElement.parentElement!;
+       // temporaryName = temporaryElement.name?.toString()?.toLowerCase();
+           temporaryName = temporaryElement.name.toString().toLowerCase();//temporaryElement.name?.toString()?.toLowerCase();
+    
+
       }
       headerName = (temporaryElement?.name ?? element.name).toString();
       if (headerName == 'null') {
@@ -111,7 +114,7 @@ class XMP {
 
     element.children.toList().forEach((child) {
       if (child is! XmlText) {
-        _addAttribute(result, child, raw);
+        _addAttribute(result, child as XmlElement, raw);
       }
     });
   }
@@ -125,7 +128,7 @@ class XMP {
       text = text.split(':')[1];
     }
     // capitalize first letter
-    text = text.capitalize;
+    text = text.toCapitalized();
 
     // fetch from replacement for exceptional cases
     var replace = _replacement[text];
@@ -133,7 +136,7 @@ class XMP {
       return replace;
     }
 
-    return text.nameCase();
+    return text.toTitleCase();
   }
 
   static void _addAttributeList(
