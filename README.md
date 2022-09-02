@@ -1,36 +1,5 @@
 # XMP
   
-  <a href="https://flutter.io">  
-    <img src="https://img.shields.io/badge/Platform-Flutter-yellow.svg"  
-      alt="Platform" />  
-  </a> 
-   <a href="https://pub.dartlang.org/packages/xmp">  
-    <img src="https://img.shields.io/pub/v/xmp.svg"  
-      alt="Pub Package" /> 
-  </a>
-   <a href="https://opensource.org/licenses/MIT">  
-    <img src="https://img.shields.io/badge/License-MIT-red.svg"  
-      alt="License: MIT" />  
-  </a>  
-   <a href="https://www.paypal.me/kawal7415">  
-    <img src="https://img.shields.io/badge/Donate-PayPal-green.svg"  
-      alt="Donate" />  
-  </a>
-   <a href="https://github.com/justkawal/xmp/issues">  
-    <img src="https://img.shields.io/github/issues/justkawal/xmp"  
-      alt="Issue" />  
-  </a> 
-   <a href="https://github.com/justkawal/xmp/network">  
-    <img src="https://img.shields.io/github/forks/justkawal/xmp"  
-      alt="Forks" />  
-  </a> 
-   <a href="https://github.com/justkawal/xmp/stargazers">  
-    <img src="https://img.shields.io/github/stars/justkawal/xmp"  
-      alt="Stars" />  
-  </a>
-  <br>
-  <br>
- 
  [xmp](https://www.pub.dev/packages/xmp) module helps to extract xmp data of the images.
  It is purely written in dart, So it can be used on server as well as on client.
 
